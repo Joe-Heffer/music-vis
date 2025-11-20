@@ -1,6 +1,8 @@
 # music-vis
 
-A production-ready CLI tool for generating stunning audio visualizations from your music files.
+A command line tool for generating audio visualisations from your music files.
+
+![A radial spectrum audio visualisation](./docs/images/vis.png)
 
 ## Features
 
@@ -39,15 +41,17 @@ All dependencies are automatically installed when you run `pip install -e .`
 
 ### Basic Usage
 
+Generate visualization from audio file
+
 ```bash
-# Generate visualization from audio file
 musicvis input.wav --output result.mp4
 ```
 
 ### Advanced Options
 
+Custom resolution and framerate
+
 ```bash
-# Custom resolution and framerate
 musicvis song.wav -o video.mp4 --width 3840 --height 2160 --fps 60
 
 # Limit duration (useful for testing)
@@ -75,17 +79,17 @@ optional arguments:
 ## How It Works
 
 1. **Audio Analysis**: Librosa extracts Mel-scaled frequency spectrums and RMS energy from your audio
-2. **Frame Generation**: OpenCV renders each frame with radial frequency bars and reactive center pulse
+2. **Frame Generation**: OpenCV renders each frame with radial frequency bars and reactive centre pulse
 3. **Temporal Smoothing**: Exponential moving average prevents flickering for smooth animations
 4. **Video Export**: MoviePy composites frames with original audio and exports as MP4
 
-### Visualization Details
+### Visualisation Details
 
 - **Frequency Range**: 20 Hz - 8 kHz (captures most music energy)
 - **Frequency Bars**: 128 Mel-scaled bands (mirrored for circular display)
 - **Smoothing**: Configurable factor (0.6 default) balances responsiveness and stability
-- **Color Gradient**: Blue (low intensity) to orange (high intensity)
-- **Center Pulse**: Scales with RMS energy for bass reactivity
+- **Colour Gradient**: Blue (low intensity) to orange (high intensity)
+- **Centre Pulse**: Scales with RMS energy for bass reactivity
 
 ## Configuration
 
