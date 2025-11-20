@@ -41,17 +41,17 @@ All dependencies are automatically installed when you run `pip install -e .`
 
 ```bash
 # Generate visualization from audio file
-audio-viz input.wav --output result.mp4
+musicvis input.wav --output result.mp4
 ```
 
 ### Advanced Options
 
 ```bash
 # Custom resolution and framerate
-audio-viz song.wav -o video.mp4 --width 3840 --height 2160 --fps 60
+musicvis song.wav -o video.mp4 --width 3840 --height 2160 --fps 60
 
 # Limit duration (useful for testing)
-audio-viz song.wav -o preview.mp4 --duration 30
+musicvis song.wav -o preview.mp4 --duration 30
 
 # Run via module
 python -m musicvis input.wav --output result.mp4
@@ -103,13 +103,13 @@ MAX_FREQ = 8000
 
 ```bash
 # Create a 4K visualization
-audio-viz track.wav -o 4k_output.mp4 --width 3840 --height 2160
+musicvis track.wav -o 4k_output.mp4 --width 3840 --height 2160
 
 # Quick preview (first 30 seconds)
-audio-viz track.wav -o preview.mp4 --duration 30
+musicvis track.wav -o preview.mp4 --duration 30
 
 # High framerate for smooth motion
-audio-viz track.wav -o smooth.mp4 --fps 60
+musicvis track.wav -o smooth.mp4 --fps 60
 ```
 
 ## Performance Notes
