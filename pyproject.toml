@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "music-vis"
+version = "0.1.0"
+description = "A command line tool for generating audio visualizations."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Joe Heffer", email = "jheffer@gmail.com"}
+]
+dependencies = [
+    "numpy",
+    "librosa",
+    "moviepy",
+    "opencv-python",
+    "soundfile"
+]
+
+[project.scripts]
+# This creates a command 'audio-viz' that calls the main function
+musicvis = "musicvis.__main__:main"
