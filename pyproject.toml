@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "music-vis"
 version = "0.1.0"
-description = "A command line tool for generating audio visualizations."
+description = "A command line tool for generating audio visualisations."
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
@@ -20,6 +20,31 @@ dependencies = [
     "soundfile>=0.12,<1.0"
 ]
 
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.8.0,<1.0"
+]
+
 [project.scripts]
 # This creates a command 'audio-viz' that calls the main function
 musicvis = "musicvis.__main__:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
