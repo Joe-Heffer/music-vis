@@ -194,7 +194,7 @@ class VisualiserRenderer:
 
         # 8. Draw inner waveform ring (on top of center circle)
         waveform_radius = int(pulse_radius * 0.65)
-        waveform_amplitude = int(pulse_radius * 0.25)
+        waveform_amplitude = int(pulse_radius * 0.45)
 
         points = []
         for i, sample in enumerate(waveform):
