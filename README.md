@@ -6,7 +6,7 @@ A command line tool for generating audio visualisations from your music files.
 
 ## Features
 
-- **Circular Frequency Spectrum**: Beautiful radial visualization that displays audio frequencies in a 360° pattern
+- **Circular Frequency Spectrum**: Beautiful radial visualisation that displays audio frequencies in a 360° pattern
 - **Bass-Reactive Center Pulse**: Dynamic center orb that pulses with the music's energy
 - **Temporal Smoothing**: Professional, flicker-free output with configurable smoothing
 - **High-Definition Output**: Renders in 1080p by default (customizable resolution)
@@ -41,7 +41,7 @@ All dependencies are automatically installed when you run `pip install -e .`
 
 ### Basic Usage
 
-Generate visualization from audio file
+Generate visualisation from audio file
 
 ```bash
 musicvis input.wav --output result.mp4
@@ -93,7 +93,7 @@ optional arguments:
 
 ## Configuration
 
-Advanced users can modify visualization parameters in `src/musicvis/__main__.py`:
+Advanced users can modify visualisation parameters in `src/musicvis/__main__.py`:
 
 ```python
 DEFAULT_FPS = 30
@@ -106,7 +106,7 @@ MAX_FREQ = 8000
 ## Examples
 
 ```bash
-# Create a 4K visualization
+# Create a 4K visualisation
 musicvis track.wav -o 4k_output.mp4 --width 3840 --height 2160
 
 # Quick preview (first 30 seconds)
